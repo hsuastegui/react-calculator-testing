@@ -1,0 +1,83 @@
+{
+  "name": "starter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server --open",
+    "develop": "webpack-dev-server --progress --colors --hot",
+    "build": "webpack -p",
+    "test": "jest --watch",
+    "update": "jest --updateSnapshot",
+    "coverage": "jest --coverage",
+    "lint": "eslint ./src",
+    "flow": "flow"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel-core": "6.22.1",
+    "babel-eslint": "7.1.1",
+    "babel-jest": "18.0.0",
+    "babel-loader": "6.2.10",
+    "babel-preset-react-app": "^2.2.0",
+    "css-loader": "0.26.1",
+    "enzyme": "^2.7.1",
+    "eslint": "3.16.1",
+    "eslint-config-react-app": "^0.6.2",
+    "eslint-loader": "1.6.0",
+    "eslint-plugin-flowtype": "^2.30.3",
+    "eslint-plugin-import": "2.0.1",
+    "eslint-plugin-jsx-a11y": "4.0.0",
+    "eslint-plugin-react": "6.4.1",
+    "extract-text-webpack-plugin": "1.0.1",
+    "flow-bin": "^0.42.0",
+    "jest": "18.1.0",
+    "postcss-loader": "1.2.2",
+    "react-addons-test-utils": "^15.4.2",
+    "react-dev-utils": "^0.5.2",
+    "react-test-renderer": "^15.4.2",
+    "style-loader": "0.13.1",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.2"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    },
+    "testPathIgnorePatterns": [
+      "<rootDir>[/\\\\](build|docs|node_modules|scripts)[/\\\\]"
+    ],
+    "testEnvironment": "node",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+    ],
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web"
+    }
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ],
+    "plugins": [
+      "transform-flow-strip-types"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  }
+}

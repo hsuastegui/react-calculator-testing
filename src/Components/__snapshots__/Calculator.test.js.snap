@@ -1,0 +1,28 @@
+exports[`Calculator tests renders correctly 1`] = `
+<section>
+  <h1>
+    Simple Calculator
+  </h1>
+  <input
+    onChange={[Function]}
+    type="text"
+    value={0} />
+  <button
+    id="add"
+    onClick={[Function]}>
+    +
+  </button>
+  <button
+    id="substract"
+    onClick={[Function]}>
+    -
+  </button>
+  <p>
+    Total: 
+    <span
+      id="total">
+      0
+    </span>
+  </p>
+</section>
+`;
